@@ -1,11 +1,3 @@
-import { TbCarSuv } from "react-icons/tb";
-import { GiCityCar } from "react-icons/gi";
-import { FaTruckPickup } from "react-icons/fa";
-import { FaVanShuttle } from "react-icons/fa6";
-import { GiF1Car } from "react-icons/gi";
-import { TbCar } from "react-icons/tb";
-import { PiTruckTrailerFill } from "react-icons/pi";
-import { FaCarSide } from "react-icons/fa";
 const CarNames = [
     {
     id:'1',
@@ -37,48 +29,48 @@ const CarPrices = [
 const categories = [
     {
         id:1,
-        type:`suv`,
-        icon:`https://www.flaticon.com/free-icon/jeep_16886831`
+        name:`suv`,
+        icon:`./icon_van.svg`
     },
     {
-        id:1,
-        type:'Sedan',
-        icon:`https://cdn-icons-png.flaticon.com/128/2736/2736918.png`
+        id:2,
+        name:'Sedan',
+        icon:`./icon_suv.svg`
     },
     {
-        id:1,
-        type:'Hatchback',
-        icon:`https://www.flaticon.com/free-icon/hatchback_5035167`
+        id:3,
+        name:'Hatchback',
+        icon:`./icon_truck.svg`
     },
     {
-        id:1,
-        type:'Couple',
-        icon:`https://www.flaticon.com/free-icon/car_5750291`
+        id:4,
+        name:'Couple',
+        icon:`./icon_couple_car.svg`
     },
     {
-        id:1,
-        type:'Hybrid',
-        icon:`https://www.flaticon.com/free-icon/car_3324498`
+        id:5,
+        name:'Hybrid',
+        icon:`./icon_suv.svg`
     },
     {
-        id:1,
-        type:'Convertable',
-        icon:`https://www.flaticon.com/free-icon/car_16011418`
+        id:6,
+        name:'Convertable',
+        icon:`./icon_couple_car.svg`
     },
     {
-        id:1,
-        type:'Truck',
-        icon:`https://www.flaticon.com/free-icon/pickup-truck_17717637`
+        id:7,
+        name:'Truck',
+        icon:`./icon_truck.svg`
     },
     {
-        id:1,
-        type:'Van',
-        icon:`https://www.flaticon.com/free-icon/delivery-van_8485262`
+        id:8,
+        name:'Van',
+        icon:`./icon_van.svg`
     },
     {
-        id:1,
-        type:'Electric car',
-        icon:`https://www.flaticon.com/free-icon/electric-car_3444059`
+        id:9,
+        name:'Electric car',
+        icon:`icon_electric_car.svg`
     },
 ]
 
