@@ -135,9 +135,77 @@ button:focus-visible {
     @apply bg-background text-foreground;
   }
 }
-
+ul{
+  list-style: none;
+}
 .nav-bar{
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.nav-links{
+  display: flex;
+}
+.nav-links, li{
+  padding: 0px 10px;
+  cursor: pointer;
+}
+li:hover{
+  /* font-size: medium; */
+  transform: scale(1.05);
+  transition: 0.2s ease-in-out;
+  color: var(--primary);
+}
+.hero-titles{
+  display: grid;
+  /* flex-direction: column; */
+  background: #cef0fc;
+  text-align: center;
+  justify-items: center;
+  gap: 2px;
+  height: 400px;
+  padding: 30px 0px;
+}
+.hero-titles, h2, p{
+  margin: 2px;
+}
+/* search bar */
+.searchbar{
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.searchCenter{
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.search{
+  width: 180px;
+  background-color: white;
+  padding: 2px;
+  margin: 5px;
+  border-radius: 0%;
+}
+.dropDown{
+  width: 180px;
+  background-color: white;
+}
+.search:nth-child(2){
+  border-left:solid 1px gray ;
+  border-right:solid 1px gray ;
+}
+
+@media screen and (max-width: 700px) {
+    /* h1 {
+      font-size: 2.5em;
+      line-height: 1.1;
+    } */
+  .search{
+    width: 120px;
+  }
 }

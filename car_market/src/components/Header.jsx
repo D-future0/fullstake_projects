@@ -5,9 +5,9 @@ import { Button } from './ui/button'
 const Header = () => {
     const {user, isSignedIn} = useUser()
   return (
-    <div className='flex justify-between items-center'>
+    <div className='nav-bar'>
         <img src='/logo.svg' alt='logo' width={50} height={50} />
-        <ul className='flex justify-between gap-16'>
+        <ul className='nav-links'>
             <li>home</li>
             <li>search</li>
             <li>new</li>
