@@ -11,6 +11,31 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const MostSearchedCars = () => {
   const swiperRef = React.useRef(null);
+  const [size, setSize] = React.useState(window.innerWidth);
+  const [view, setView] = React.useState(3);
+  
+  const checkSize = () => {
+    setSize(window.innerWidth);
+    console.log(size)
+  };
+  const formatCardBasis = (basis)=>{
+    if(size <= 800){
+      setView(1)
+    }
+    else{
+      setView(3)
+    }
+
+  }
+
+  React.useEffect(() => {
+    console.log('useEffect');
+    window.addEventListener('resize', checkSize);
+    return () => {
+      window.removeEventListener('resize', checkSize);
+      formatCardBasis()
+    };
+  }, [size, view]);
   return (
     <div style={{ textAlign: "center" }}>
       <h2>Most Searched Cars</h2>
@@ -27,8 +52,9 @@ const MostSearchedCars = () => {
         <Swiper
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           spaceBetween={50}
-          slidesPerView={3}
-          onSlideChange={() => console.log("slide change")}
+          // {size <= 700 ? slidesPerView={3}: slidesPerView={1}}
+          slidesPerView={view}
+          // onSlideChange={() => console.log("slide change")}
           loop={true}
           // onSwiper={(swiper) => console.log(swiper)}
         >
