@@ -6,7 +6,7 @@ const createRandomCarList = ()=>{
         type:faker.vehicle.type(),
         model:faker.vehicle.model(),
         price:faker.finance.amount(),
-        image:'',
+        image:`./Red-car.png`,
         fuelType:faker.vehicle.fuel(),
         miles:1000,
         gearType:'automatic',

@@ -212,6 +212,11 @@ li:hover{
   grid-gap: 6px;
   padding-top: 40px;
 }
+/* most searched cars  */
+.basis{
+  flex-basis: 33%;
+  
+}
 
 @media screen and (max-width: 700px) {
     /* h1 {
