@@ -19,6 +19,9 @@ const MostSearchedCars = () => {
     console.log(size)
   };
   const formatCardBasis = (basis)=>{
+    if(size <= 1200){
+      setView(2)
+    }
     if(size <= 800){
       setView(1)
     }
@@ -43,7 +46,7 @@ const MostSearchedCars = () => {
       <div
         style={{
           position: "relative",
-          padding: "40px",
+          padding: "80px",
           display: "flex",
           justifyItems: "center",
           alignItems: "center",
@@ -60,7 +63,7 @@ const MostSearchedCars = () => {
         >
           {fakeData.carList.map((car, index) => {
             return (
-              <SwiperSlide style={{ display: "grid", placeItems: "center" }}>
+              <SwiperSlide>
                 <CarCard {...car} key={index} />
               </SwiperSlide>
             );
