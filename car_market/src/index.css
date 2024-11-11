@@ -200,8 +200,6 @@ li:hover{
 }
 /* category */
 .category-type{
-  /* display: flex; */
-  /* place-items: center; */
   text-align: center;
   padding-top: 150px;
 }
@@ -213,10 +211,30 @@ li:hover{
   padding-top: 40px;
 }
 /* most searched cars  */
-.basis{
-  flex-basis: 33%;
-  /* grid-template-columns: 3fr; */
-  
+.carCard{
+  display:grid;
+   place-items: center; 
+   cursor:default; 
+   border: solid 2px gainsboro;
+   border-radius: 10px;
+   width: 300px;
+   overflow: hidden;
+}
+.carCard img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.swipe{
+  position: relative;
+  /* padding-left: 20px; */
+  display: flex;
+  justify-items: center;
+  place-items: center;
+  grid-template-columns: auto;
+}
+.slide{
+  /* padding: 20px; */
 }
 
 @media screen and (max-width: 700px) {
@@ -226,5 +244,51 @@ li:hover{
     } */
   .search{
     width: 120px;
+  }
+}
+/* info sec */
+@media screen and (min-width:600px){
+
+  .info-sec{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .my-grid-cont{
+    grid-column:1fr 1fr;
+  }
+  .my-grid-img-cont{
+    height: 20rem;
+  }
+  .info-sec{
+    grid-template-columns:1f;
+  }
+  .info-span{
+    display: none;
+  }
+  .info-details{
+    padding: 4rem;
+  }
+  .info-h{
+    font-size: large;
+  }
+
+}
+@media screen and (min-width:1024px){
+  .my-grid-cont{
+    grid-template-columns: repeat(2, 1fr);
+    height:100hv;
+  }
+  .my-grid-span{
+    display: block;
+  }
+  .info-img{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+  .my-grid-img-cont{
+    height: 100%;
+  }
+  .info-h{
+    padding: 6rem;
   }
 }

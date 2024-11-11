@@ -18,11 +18,8 @@ const MostSearchedCars = () => {
     setSize(window.innerWidth);
     console.log(size)
   };
-  const formatCardBasis = (basis)=>{
-    if(size <= 1200){
-      setView(2)
-    }
-    if(size <= 800){
+  const formatCardBasis = ()=>{
+    if(size <= 1000){
       setView(1)
     }
     else{
@@ -32,7 +29,7 @@ const MostSearchedCars = () => {
   }
 
   React.useEffect(() => {
-    console.log('useEffect');
+    // console.log('useEffect');
     window.addEventListener('resize', checkSize);
     return () => {
       window.removeEventListener('resize', checkSize);
@@ -40,13 +37,13 @@ const MostSearchedCars = () => {
     };
   }, [size, view]);
   return (
-    <div style={{ textAlign: "center" }}>
+    <div style={{ textAlign: "center"}}>
       <h2>Most Searched Cars</h2>
 
       <div
         style={{
           position: "relative",
-          padding: "80px",
+          padding: "60px",
           display: "flex",
           justifyItems: "center",
           alignItems: "center",
@@ -54,16 +51,15 @@ const MostSearchedCars = () => {
       >
         <Swiper
           onSwiper={(swiper) => (swiperRef.current = swiper)}
-          spaceBetween={50}
+          spaceBetween={100}
           // {size <= 700 ? slidesPerView={3}: slidesPerView={1}}
           slidesPerView={view}
-          // onSlideChange={() => console.log("slide change")}
           loop={true}
-          // onSwiper={(swiper) => console.log(swiper)}
+          className="swipe"
         >
           {fakeData.carList.map((car, index) => {
             return (
-              <SwiperSlide>
+              <SwiperSlide className="slide">
                 <CarCard {...car} key={index} />
               </SwiperSlide>
             );
