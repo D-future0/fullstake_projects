@@ -18,7 +18,7 @@ const MostSearchedCars = () => {
     setSize(window.innerWidth);
     console.log(size)
   };
-  const formatCardBasis = ()=>{
+  const formatCardBasis = ()=>{ 
     if(size <= 1000){
       setView(1)
     }
